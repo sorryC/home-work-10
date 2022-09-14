@@ -1,13 +1,14 @@
 public class Main {
     public static void main(String[] args) {
-     Author author = new Author("Pyshkin Aleksandr Sergeevich");
-     Book poltava = new Book(author, 1828, "Poltava");
-        poltava.getPublisherYear(1828);
-        System.out.println(poltava);
+        Author author1 = new Author( "Stephen", "King");
+        Author author2 = new Author("Jack", "London");
 
-     Author block = new Author("Block Aleksandr Aleksandrovich");
-     Book ramzes = new Book(author, 1921, "Ramzes");
-        ramzes.getPublisherYear(1921);
-        System.out.println(ramzes);
+        Book book1 = new Book("Pet cemetery", author1, 2000);
+        Book book2 = new Book("White Fang", author2, 1998);
+
+        book1.setYearPublic(2012);
+        System.out.println(book1.getAuthor().getAuthorName());
+        System.out.println(book1.getYearPublic());
+        System.out.println(book1);
     }
 }
